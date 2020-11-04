@@ -1,0 +1,33 @@
+﻿@model ASP.NET.MVC.Demo.Validation.Models.StudentViewModel
+@{
+    ViewBag.Title = "OneNX";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/bundles/jqueryval"></script>
+    }
+<h2>OneNX</h2>
+@using (Html.BeginForm("OneNX", "Home", FormMethod.Post, new { @id="OneNXForm"}))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, new { @class = "col-md-2 control-lable" })
+        <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-lable" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
+<script>
+    
+</script>
+
