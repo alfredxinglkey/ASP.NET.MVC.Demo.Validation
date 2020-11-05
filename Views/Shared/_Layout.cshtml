@@ -39,6 +39,29 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
+
+    <script>
+        $("#btnOne").click(function () {
+            $.ajax({
+                url: "/Home/HCX",
+                method: "post",
+                data: {
+                    Name: "OneNX",
+                    Wife: "Lynn",
+                },
+                success: function (data) {
+                    alert(data.Status);
+                },
+                error: function (data) {
+                    alert(data.ErrorCode);
+                },
+                complete: function (data) {
+                    alert(data.Status);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

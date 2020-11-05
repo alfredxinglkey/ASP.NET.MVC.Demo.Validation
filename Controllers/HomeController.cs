@@ -38,5 +38,19 @@ namespace ASP.NET.MVC.Demo.Validation.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult HC()
+		{
+			return View();
+		}
+		[HttpPost]
+		public JsonResult HCX()
+		{
+			var a = Request;
+			var name = Request["Name"];
+			var wife = Request["Wife"];
+			var result = new { Stutas = "OK" };
+			return Json(result);
+		}
 	}
 }

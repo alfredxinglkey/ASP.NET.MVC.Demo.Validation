@@ -3,7 +3,11 @@
     errorPlacement: function (error, element) {
         error.appendTo(element.parent());
     },
+    success: function (a, b) { 
+
+    },
     errorElement: "span",
+    container: '#errorMessage',
     rules: {
         Id: {
             required: true,
@@ -12,6 +16,9 @@
             maxlength: 6,
         },
         Name: {
+            required: true,
+        },
+        TestX: {
             required: true,
         },
     },
